@@ -1,8 +1,8 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/github/github-mcp-server)](https://goreportcard.com/report/github.com/github/github-mcp-server)
+![Go Report Card](https://goreportcard.com/badge/github.com/github/github-mcp-server)
 
 # GitHub MCP Server
 
-The GitHub MCP Server connects AI tools directly to GitHub's platform. This gives AI agents, assistants, and chatbots the ability to read repositories and code files, manage issues and PRs, analyze code, and automate workflows. All through natural language interactions.
+The GitHub MCP Server connects AI tools directly to GitHub' platform. This gives AI agents, assistants, and chatbots the ability to read repositories and code files, manage issues and PRs, analyze code, and automate workflows. All through natural language interactions.
 
 ### Use Cases
 
@@ -16,9 +16,8 @@ Built for developers who want to connect their AI tools to GitHub context and ca
 
 ---
 
-## Remote GitHub MCP Server
-
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D) [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&config=%7B%22type%22%3A%20%22http%22%2C%22url%22%3A%20%22https%3A%2F%2Fapi.githubcopilot.com%2Fmcp%2F%22%7D&quality=insiders)
+Remote GitHub MCP Server
+![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white) ![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)
 
 The remote GitHub MCP Server is hosted by GitHub and provides the easiest method for getting up and running. If your MCP host does not support remote MCP servers, don't worry! You can use the [local version of the GitHub MCP Server](https://github.com/github/github-mcp-server?tab=readme-ov-file#local-github-mcp-server) instead.
 
@@ -26,7 +25,6 @@ The remote GitHub MCP Server is hosted by GitHub and provides the easiest method
 
 1. A compatible MCP host with remote server support (VS Code 1.101+, Claude Desktop, Cursor, Windsurf, etc.)
 2. Any applicable [policies enabled](https://github.com/github/github-mcp-server/blob/main/docs/policies-and-governance.md)
-
 ### Install in VS Code
 
 For quick installation, use one of the one-click install buttons above. Once you complete that flow, toggle Agent mode (located by the Copilot Chat text input) and the server will start. Make sure you're using [VS Code 1.101](https://code.visualstudio.com/updates/v1_101) or [later](https://code.visualstudio.com/updates) for remote MCP and OAuth support.
@@ -88,9 +86,7 @@ Alternatively, to manually configure VS Code, choose the appropriate JSON block 
 - **[Cursor](/docs/installation-guides/install-cursor.md)** - Installation guide for Cursor IDE
 - **[Windsurf](/docs/installation-guides/install-windsurf.md)** - Installation guide for Windsurf IDE
 - **[Rovo Dev CLI](/docs/installation-guides/install-rovo-dev-cli.md)** - Installation guide for Rovo Dev CLI
-
 > **Note:** Each MCP host application needs to configure a GitHub App or OAuth App to support remote access via OAuth. Any host application that supports remote MCP servers should support the remote GitHub server with PAT authentication. Configuration details and support levels vary by host. Make sure to refer to the host application's documentation for more info.
-
 ### Configuration
 
 #### Toolset configuration
@@ -150,6 +146,7 @@ GitHub Enterprise Cloud can also make use of the remote server.
 
 Example for `https://octocorp.ghe.com` with GitHub PAT token:
 
+
 ```
 {
     ...
@@ -165,22 +162,20 @@ Example for `https://octocorp.ghe.com` with GitHub PAT token:
 ```
 
 > **Note:** When using OAuth with GitHub Enterprise with VS Code and GitHub Copilot, you also need to configure your VS Code settings to point to your GitHub Enterprise instance - see [Authenticate from VS Code](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/configure-personal-settings/authenticate-to-ghecom)
-
 ##### GitHub Enterprise Server
 
 GitHub Enterprise Server does not support remote server hosting. Please refer to [GitHub Enterprise Server and Enterprise Cloud with data residency (ghe.com)](#github-enterprise-server-and-enterprise-cloud-with-data-residency-ghecom) from the local server configuration.
 
 ---
 
-## Local GitHub MCP Server
-
-[![Install with Docker in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&inputs=%5B%7B%22id%22%3A%22github_token%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22GitHub%20Personal%20Access%20Token%22%2C%22password%22%3Atrue%7D%5D&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22GITHUB_PERSONAL_ACCESS_TOKEN%22%2C%22ghcr.io%2Fgithub%2Fgithub-mcp-server%22%5D%2C%22env%22%3A%7B%22GITHUB_PERSONAL_ACCESS_TOKEN%22%3A%22%24%7Binput%3Agithub_token%7D%22%7D%7D) [![Install with Docker in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=github&inputs=%5B%7B%22id%22%3A%22github_token%22%2C%22type%22%3A%22promptString%22%2C%22description%22%3A%22GitHub%20Personal%20Access%20Token%22%2C%22password%22%3Atrue%7D%5D&config=%7B%22command%22%3A%22docker%22%2C%22args%22%3A%5B%22run%22%2C%22-i%22%2C%22--rm%22%2C%22-e%22%2C%22GITHUB_PERSONAL_ACCESS_TOKEN%22%2C%22ghcr.io%2Fgithub%2Fgithub-mcp-server%22%5D%2C%22env%22%3A%7B%22GITHUB_PERSONAL_ACCESS_TOKEN%22%3A%22%24%7Binput%3Agithub_token%7D%22%7D%7D&quality=insiders)
+Local GitHub MCP Server
+![Install with Docker in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white) ![Install with Docker in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Install_Server-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)
 
 ### Prerequisites
 
-1. To run the server in a container, you will need to have [Docker](https://www.docker.com/) installed.
-2. Once Docker is installed, you will also need to ensure Docker is running. The Docker image is available at `ghcr.io/github/github-mcp-server`. The image is public; if you get errors on pull, you may have an expired token and need to `docker logout ghcr.io`.
-3. Lastly you will need to [Create a GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new).
+3. To run the server in a container, you will need to have [Docker](https://www.docker.com/) installed.
+4. Once Docker is installed, you will also need to ensure Docker is running. The Docker image is available at `ghcr.io/github/github-mcp-server`. The image is public; if you get errors on pull, you may have an expired token and need to `docker logout ghcr.io`.
+5. Lastly you will need to [Create a GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new).
 The MCP server can use many of the GitHub APIs, so enable the permissions that you feel comfortable granting your AI tools (to learn more about access tokens, please check out the [documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)).
 
 <details><summary><b>Handling PATs Securely</b></summary>
@@ -247,7 +242,7 @@ the hostname for GitHub Enterprise Server or GitHub Enterprise Cloud with data r
 - For GitHub Enterprise Server, prefix the hostname with the `https://` URI scheme, as it otherwise defaults to `http://`, which GitHub Enterprise Server does not support.
 - For GitHub Enterprise Cloud with data residency, use `https://YOURSUBDOMAIN.ghe.com` as the hostname.
 
-``` json
+```json
 "github": {
     "command": "docker",
     "args": [
@@ -278,6 +273,7 @@ More about using MCP server tools in VS Code's [agent mode documentation](https:
 Install in GitHub Copilot on other IDEs (JetBrains, Visual Studio, Eclipse, etc.)
 
 Add the following JSON block to your IDE's MCP settings.
+
 
 ```json
 {
@@ -314,7 +310,7 @@ Optionally, you can add a similar example (i.e. without the mcp key) to a file c
 
 <details>
 <summary><b>Example JSON block without the MCP key included</b></summary>
-<br>
+<br>&#8203;
 
 ```json
 {
@@ -361,11 +357,11 @@ For other MCP host applications, please refer to our installation guides:
 For a complete overview of all installation options, see our **[Installation Guides Index](docs/installation-guides)**.
 
 > **Note:** Any host application that supports local MCP servers should be able to access the local GitHub MCP server. However, the specific configuration process, syntax and stability of the integration will vary by host application. While many may follow a similar format to the examples above, this is not guaranteed. Please refer to your host application's documentation for the correct MCP configuration syntax and setup process.
-
 ### Build from source
 
 If you don't have Docker, you can use `go build` to build the binary in the
 `cmd/github-mcp-server` directory, and use the `github-mcp-server stdio` command with the `GITHUB_PERSONAL_ACCESS_TOKEN` environment variable set to your token. To specify the output location of the build, use the `-o` flag. You should configure your server to use the built executable as its `command`. For example:
+
 
 ```JSON
 {
@@ -389,6 +385,7 @@ The `github-mcp-server` binary includes a few CLI subcommands that are helpful f
 
 - `github-mcp-server tool-search "<query>"` searches tools by name, description, and input parameter names. Use `--max-results` to return more matches.
 Example (color output requires a TTY; use `docker run -t` (or `-it`) when running in Docker):
+
 ```bash
 docker run -it --rm ghcr.io/github/github-mcp-server tool-search "issue" --max-results 5
 github-mcp-server tool-search "issue" --max-results 5
@@ -398,27 +395,26 @@ github-mcp-server tool-search "issue" --max-results 5
 
 The GitHub MCP Server supports enabling or disabling specific groups of functionalities via the `--toolsets` flag. This allows you to control which GitHub API capabilities are available to your AI tools. Enabling only the toolsets that you need can help the LLM with tool choice and reduce the context size.
 
-_Toolsets are not limited to Tools. Relevant MCP Resources and Prompts are also included where applicable._
+*Toolsets are not limited to Tools. Relevant MCP Resources and Prompts are also included where applicable.*
 
 When no toolsets are specified, [default toolsets](#default-toolset) are used.
 
 > **Looking for examples?** See the [Server Configuration Guide](./docs/server-configuration.md) for common recipes like minimal setups, read-only mode, and combining tools with toolsets.
-
 #### Specifying Toolsets
 
 To specify toolsets you want available to the LLM, you can pass an allow-list in two ways:
 
-1. **Using Command Line Argument**:
+6. **Using Command Line Argument**:
 
-   ```bash
-   github-mcp-server --toolsets repos,issues,pull_requests,actions,code_security
-   ```
+```bash
+github-mcp-server --toolsets repos,issues,pull_requests,actions,code_security
+```
 
-2. **Using Environment Variable**:
+7. **Using Environment Variable**:
 
-   ```bash
-   GITHUB_TOOLSETS="repos,issues,pull_requests,actions,code_security" ./github-mcp-server
-   ```
+```bash
+GITHUB_TOOLSETS="repos,issues,pull_requests,actions,code_security" ./github-mcp-server
+```
 
 The environment variable `GITHUB_TOOLSETS` takes precedence over the command line argument if both are provided.
 
@@ -426,33 +422,33 @@ The environment variable `GITHUB_TOOLSETS` takes precedence over the command lin
 
 You can also configure specific tools using the `--tools` flag. Tools can be used independently or combined with toolsets and dynamic toolsets discovery for fine-grained control.
 
-1. **Using Command Line Argument**:
+8. **Using Command Line Argument**:
 
-   ```bash
-   github-mcp-server --tools get_file_contents,issue_read,create_pull_request
-   ```
+```bash
+github-mcp-server --tools get_file_contents,issue_read,create_pull_request
+```
 
-2. **Using Environment Variable**:
+9. **Using Environment Variable**:
 
-   ```bash
-   GITHUB_TOOLS="get_file_contents,issue_read,create_pull_request" ./github-mcp-server
-   ```
+```bash
+GITHUB_TOOLS="get_file_contents,issue_read,create_pull_request" ./github-mcp-server
+```
 
-3. **Combining with Toolsets** (additive):
+10. **Combining with Toolsets** (additive):
 
-   ```bash
-   github-mcp-server --toolsets repos,issues --tools get_gist
-   ```
+```bash
+github-mcp-server --toolsets repos,issues --tools get_gist
+```
 
-   This registers all tools from `repos` and `issues` toolsets, plus `get_gist`.
+This registers all tools from `repos` and `issues` toolsets, plus `get_gist`.
 
-4. **Combining with Dynamic Toolsets** (additive):
+11. **Combining with Dynamic Toolsets** (additive):
 
-   ```bash
-   github-mcp-server --tools get_file_contents --dynamic-toolsets
-   ```
+```bash
+github-mcp-server --tools get_file_contents --dynamic-toolsets
+```
 
-   This registers `get_file_contents` plus the dynamic toolset tools (`enable_toolset`, `list_available_toolsets`, `get_toolset_tools`).
+This registers `get_file_contents` plus the dynamic toolset tools (`enable_toolset`, `list_available_toolsets`, `get_toolset_tools`).
 
 **Important Notes:**
 
@@ -460,10 +456,10 @@ You can also configure specific tools using the `--tools` flag. Tools can be use
 - Read-only mode takes priority: write tools are skipped if `--read-only` is set, even if explicitly requested via `--tools`
 - Tool names must match exactly (e.g., `get_file_contents`, not `getFileContents`). Invalid tool names will cause the server to fail at startup with an error message
 - When tools are renamed, old names are preserved as aliases for backward compatibility. See [Deprecated Tool Aliases](docs/deprecated-tool-aliases.md) for details.
-
 ### Using Toolsets With Docker
 
 When using Docker, you can pass the toolsets as environment variables:
+
 
 ```bash
 docker run -i --rm \
@@ -475,6 +471,7 @@ docker run -i --rm \
 ### Using Tools With Docker
 
 When using Docker, you can pass specific tools as environment variables. You can also combine tools with toolsets:
+
 
 ```bash
 # Tools only
@@ -497,11 +494,13 @@ docker run -i --rm \
 
 The special toolset `all` can be provided to enable all available toolsets regardless of any other configuration:
 
+
 ```bash
 ./github-mcp-server --toolsets all
 ```
 
 Or using the environment variable:
+
 
 ```bash
 GITHUB_TOOLSETS="all" ./github-mcp-server
@@ -521,6 +520,7 @@ The default configuration is:
 
 To keep the default configuration and add additional toolsets:
 
+
 ```bash
 GITHUB_TOOLSETS="default,stargazers" ./github-mcp-server
 ```
@@ -529,19 +529,20 @@ GITHUB_TOOLSETS="default,stargazers" ./github-mcp-server
 
 The local GitHub MCP Server offers an insiders version with early access to new features and experimental tools.
 
-1. **Using Command Line Argument**:
+12. **Using Command Line Argument**:
 
-   ```bash
-   ./github-mcp-server --insiders
-   ```
+```bash
+./github-mcp-server --insiders
+```
 
-2. **Using Environment Variable**:
+13. **Using Environment Variable**:
 
-   ```bash
-   GITHUB_INSIDERS=true ./github-mcp-server
-   ```
+```bash
+GITHUB_INSIDERS=true ./github-mcp-server
+```
 
 When using Docker:
+
 
 ```bash
 docker run -i --rm \
@@ -555,6 +556,7 @@ docker run -i --rm \
 The following sets of tools are available:
 
 <!-- START AUTOMATED TOOLSETS -->
+
 |     | Toolset                 | Description                                                   |
 | --- | ----------------------- | ------------------------------------------------------------- |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="pkg/octicons/icons/person-dark.png"><source media="(prefers-color-scheme: light)" srcset="pkg/octicons/icons/person-light.png"><img src="pkg/octicons/icons/person-light.png" width="20" height="20" alt="person"></picture> | `context`               | **Strongly recommended**: Tools that provide context about the current user and GitHub context you are operating in |
@@ -576,19 +578,21 @@ The following sets of tools are available:
 | <picture><source media="(prefers-color-scheme: dark)" srcset="pkg/octicons/icons/shield-dark.png"><source media="(prefers-color-scheme: light)" srcset="pkg/octicons/icons/shield-light.png"><img src="pkg/octicons/icons/shield-light.png" width="20" height="20" alt="shield"></picture> | `security_advisories` | Security advisories related tools |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="pkg/octicons/icons/star-dark.png"><source media="(prefers-color-scheme: light)" srcset="pkg/octicons/icons/star-light.png"><img src="pkg/octicons/icons/star-light.png" width="20" height="20" alt="star"></picture> | `stargazers` | GitHub Stargazers related tools |
 | <picture><source media="(prefers-color-scheme: dark)" srcset="pkg/octicons/icons/people-dark.png"><source media="(prefers-color-scheme: light)" srcset="pkg/octicons/icons/people-light.png"><img src="pkg/octicons/icons/people-light.png" width="20" height="20" alt="people"></picture> | `users` | GitHub User related tools |
+
 <!-- END AUTOMATED TOOLSETS -->
 
 ### Additional Toolsets in Remote GitHub MCP Server
 
-| Toolset                 | Description                                                   |
-| ----------------------- | ------------------------------------------------------------- |
-| `copilot` | Copilot related tools (e.g. Copilot Coding Agent) |
-| `copilot_spaces` | Copilot Spaces related tools |
+| Toolset                      | Description                                                |
+|------------------------------|------------------------------------------------------------|
+| `copilot`                    | Copilot related tools (e.g. Copilot Coding Agent)          |
+| `copilot_spaces`             | Copilot Spaces related tools                               |
 | `github_support_docs_search` | Search docs to answer GitHub product and support questions |
 
 ## Tools
 
 <!-- START AUTOMATED TOOLS -->
+
 <details>
 
 <summary><picture><source media="(prefers-color-scheme: dark)" srcset="pkg/octicons/icons/workflow-dark.png"><source media="(prefers-color-scheme: light)" srcset="pkg/octicons/icons/workflow-light.png"><img src="pkg/octicons/icons/workflow-light.png" width="20" height="20" alt="workflow"></picture> Actions</summary>
@@ -1388,6 +1392,8 @@ The following sets of tools are available:
   - `sort`: Sort users by number of followers or repositories, or when the person joined GitHub. (string, optional)
 
 </details>
+
+</details>
 <!-- END AUTOMATED TOOLS -->
 
 ### Additional Tools in Remote GitHub MCP Server
@@ -1436,11 +1442,13 @@ Instead of starting with all tools enabled, you can turn on dynamic toolset disc
 
 When using the binary, you can pass the `--dynamic-toolsets` flag.
 
+
 ```bash
 ./github-mcp-server --dynamic-toolsets
 ```
 
 When using Docker, you can pass the toolsets as environment variables:
+
 
 ```bash
 docker run -i --rm \
@@ -1453,11 +1461,13 @@ docker run -i --rm \
 
 To run the server in read-only mode, you can use the `--read-only` flag. This will only offer read-only tools, preventing any modifications to repositories, issues, pull requests, etc.
 
+
 ```bash
 ./github-mcp-server --read-only
 ```
 
 When using Docker, you can pass the read-only mode as an environment variable:
+
 
 ```bash
 docker run -i --rm \
@@ -1470,11 +1480,13 @@ docker run -i --rm \
 
 Lockdown mode limits the content that the server will surface from public repositories. When enabled, the server checks whether the author of each item has push access to the repository. Private repositories are unaffected, and collaborators keep full access to their own content.
 
+
 ```bash
 ./github-mcp-server --lockdown-mode
 ```
 
 When running with Docker, set the corresponding environment variable:
+
 
 ```bash
 docker run -i --rm \
@@ -1497,7 +1509,6 @@ Following tools will filter out content from users lacking the push access:
 - `pull_request_read:get_comments`
 - `pull_request_read:get_review_comments`
 - `pull_request_read:get_reviews`
-
 ## i18n / Overriding Descriptions
 
 The descriptions of the tools can be overridden by creating a
@@ -1505,6 +1516,7 @@ The descriptions of the tools can be overridden by creating a
 
 The file should contain a JSON object with the tool names as keys and the new
 descriptions as values. For example:
+
 
 ```json
 {
@@ -1520,6 +1532,7 @@ This flag will preserve any translations/overrides you have made, while adding
 any new translations that have been added to the binary since the last time you
 exported.
 
+
 ```sh
 ./github-mcp-server --export-translations
 cat github-mcp-server-config.json
@@ -1531,6 +1544,7 @@ variable names are the same as the keys in the JSON file, prefixed with
 
 For example, to override the `TOOL_ADD_ISSUE_COMMENT_DESCRIPTION` tool, you can
 set the following environment variable:
+
 
 ```sh
 export GITHUB_MCP_TOOL_ADD_ISSUE_COMMENT_DESCRIPTION="an alternative description"
