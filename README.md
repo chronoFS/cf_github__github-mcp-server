@@ -1,6 +1,6 @@
 ![Go Report Card](https://goreportcard.com/badge/github.com/github/github-mcp-server)
 
-# GitHub MCP Servers
+# GitHub MCP Server
 
 The GitHub MCP Server connects AI tools directly to GitHub' platform. This gives AI agents, assistants, and chatbots the ability to read repositories and code files, manage issues and PRs, analyze code, and automate workflows. All through natural language interactions.
 
